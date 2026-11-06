@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background-color: #14213d;
+  --surface-color: #1f3054;
+  --text-color: #f5efe0;
+  --accent-color: #d4b26a;
+  --headings-font: "Cinzel", serif;
+  --body-font: "Karla", sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--headings-font);
+  color: var(--accent-color);
+}
+
+header {
+  background-color: var(--surface-color);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+nav button {
+  background: none;
+  border: none;
+  font: inherit;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+nav button:hover,
+nav button:focus-visible {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  outline: none;
+}
