@@ -1,11 +1,13 @@
 export function createHome() {
   const homeContainer = document.createElement("div");
+  homeContainer.classList.add("home-hero");
 
   const homeTitle = document.createElement("h1");
   homeTitle.textContent = "Suburban";
   homeContainer.appendChild(homeTitle);
 
   const homeTagline = document.createElement("p");
+  homeTagline.classList.add("home-tagline");
   homeTagline.textContent = "Rhiwbina's front room";
   homeContainer.appendChild(homeTagline);
 
