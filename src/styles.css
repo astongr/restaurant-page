@@ -17,6 +17,8 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--body-font);
+  font-size: 1.125rem;
+  line-height: 1.6;
 }
 
 h1,
@@ -24,10 +26,15 @@ h2,
 h3 {
   font-family: var(--headings-font);
   color: var(--accent-color);
+  margin-bottom: 0.5rem;
 }
 
 header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
   background-color: var(--surface-color);
+  padding: 0.5rem 2rem;
 }
 
 nav {
@@ -54,5 +61,20 @@ nav button:focus-visible {
 }
 
 nav button[aria-current="page"] {
+  color: var(--accent-color);
+}
+
+#content {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  height: 5rem;
   color: var(--accent-color);
 }
