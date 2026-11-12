@@ -31,6 +31,10 @@ function createMenuCard(menuOption) {
 
 export function createMenu() {
   const menuContainer = document.createElement("div");
+  menuContainer.classList.add("menu-container");
+
+  const menuGridContainer = document.createElement("div");
+  menuGridContainer.classList.add("menu-grid-container");
 
   const menuTitle = document.createElement("h1");
   menuTitle.textContent = "Menu";
@@ -38,8 +42,10 @@ export function createMenu() {
 
   items.forEach(function (itemOption) {
     const menuCard = createMenuCard(itemOption);
-    menuContainer.appendChild(menuCard);
+    menuGridContainer.appendChild(menuCard);
   });
+
+  menuContainer.appendChild(menuGridContainer);
 
   const menuContent = document.querySelector("#content");
   menuContent.appendChild(menuContainer);

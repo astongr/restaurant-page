@@ -124,3 +124,36 @@ footer {
   text-align: center;
   font-size: 0.875rem;
 }
+
+.menu-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.menu-card {
+  background-color: var(--surface-color);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.menu-option-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-option-name,
+.menu-option-price {
+  margin: 0;
+  padding-inline: 0.75rem;
+}
+
+.menu-option-name {
+  padding-top: 0.75rem;
+}
+
+.menu-option-price {
+  padding-bottom: 0.75rem;
+}
