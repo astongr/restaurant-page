@@ -135,6 +135,14 @@ footer {
   background-color: var(--surface-color);
   border-radius: 1rem;
   overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 12px rgb(212 178 106 / 0.4);
 }
 
 .menu-option-image {
@@ -156,4 +164,5 @@ footer {
 
 .menu-option-price {
   padding-bottom: 0.75rem;
+  font-weight: 600;
 }
