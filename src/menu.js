@@ -1,5 +1,7 @@
-const latteOption = { name: "Latte", price: "£3.50" };
-const hotChocolateOption = { name: "Hot Chocolate", price: "£4.50" };
+const items = [
+  { name: "Latte", price: "£3.50" },
+  { name: "Hot Chocolate", price: "£4.50" },
+];
 
 function createMenuCard(menuOption) {
   const card = document.createElement("div");
@@ -25,11 +27,10 @@ export function createMenu() {
   menuTitle.textContent = "Menu";
   menuContainer.appendChild(menuTitle);
 
-  const latteCard = createMenuCard(latteOption);
-  menuContainer.appendChild(latteCard);
-
-  const hotChocolateCard = createMenuCard(hotChocolateOption);
-  menuContainer.appendChild(hotChocolateCard);
+  items.forEach(function (itemOption) {
+    const menuCard = createMenuCard(itemOption);
+    menuContainer.appendChild(menuCard);
+  });
 
   const menuContent = document.querySelector("#content");
   menuContent.appendChild(menuContainer);
