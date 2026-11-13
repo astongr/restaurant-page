@@ -36,15 +36,19 @@ export function createMenu() {
   const menuGridContainer = document.createElement("div");
   menuGridContainer.classList.add("menu-grid-container");
 
+  const menuBanner = document.createElement("div");
+  menuBanner.classList.add("menu-banner", "page-banner");
+
   const menuTitle = document.createElement("h1");
   menuTitle.textContent = "Menu";
-  menuContainer.appendChild(menuTitle);
+  menuBanner.appendChild(menuTitle);
 
   items.forEach(function (itemOption) {
     const menuCard = createMenuCard(itemOption);
     menuGridContainer.appendChild(menuCard);
   });
 
+  menuContainer.appendChild(menuBanner);
   menuContainer.appendChild(menuGridContainer);
 
   const menuContent = document.querySelector("#content");

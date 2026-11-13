@@ -125,6 +125,8 @@ footer {
   font-size: 0.875rem;
 }
 
+/* menu styling */
+
 .menu-grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -165,4 +167,25 @@ footer {
 .menu-option-price {
   padding-bottom: 0.75rem;
   font-weight: 600;
+}
+
+.page-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-banner h1 {
+  margin-bottom: 0;
+}
+
+.menu-banner {
+  background-image:
+    linear-gradient(rgb(20 33 61 / 0.7), rgb(20 33 61 / 0.4)),
+    url("./images/menu.jpg");
+  background-position: center 30%;
 }
