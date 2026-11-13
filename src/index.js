@@ -12,19 +12,32 @@ function clearContent() {
   contentContainer.innerHTML = "";
 }
 
+function removeActive() {
+  homeButton.removeAttribute("aria-current");
+  menuButton.removeAttribute("aria-current");
+  contactButton.removeAttribute("aria-current");
+}
+
 homeButton.addEventListener("click", function () {
   clearContent();
   createHome();
+  removeActive();
+  homeButton.setAttribute("aria-current", "page");
 });
 
 menuButton.addEventListener("click", function () {
   clearContent();
   createMenu();
+  removeActive();
+  menuButton.setAttribute("aria-current", "page");
 });
 
 contactButton.addEventListener("click", function () {
   clearContent();
   createContact();
+  removeActive();
+  contactButton.setAttribute("aria-current", "page");
 });
 
+homeButton.setAttribute("aria-current", "page");
 createHome();

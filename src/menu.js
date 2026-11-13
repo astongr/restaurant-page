@@ -1,11 +1,19 @@
+import latteImage from "./images/latte.jpg";
+import placeholderImage from "./images/menu.jpg";
+
 const items = [
-  { name: "Latte", price: "£3.50" },
-  { name: "Hot Chocolate", price: "£4.50" },
+  { name: "Latte", price: "£3.50", image: latteImage },
+  { name: "Hot Chocolate", price: "£4.50", image: placeholderImage },
 ];
 
 function createMenuCard(menuOption) {
   const card = document.createElement("div");
   card.classList.add("menu-card");
+
+  const image = document.createElement("img");
+  image.src = menuOption.image;
+  image.alt = menuOption.name;
+  image.classList.add("menu-option-image");
 
   const name = document.createElement("h3");
   name.textContent = menuOption.name;
@@ -15,6 +23,7 @@ function createMenuCard(menuOption) {
   price.textContent = menuOption.price;
   price.classList.add("menu-option-price");
 
+  card.appendChild(image);
   card.appendChild(name);
   card.appendChild(price);
   return card;
@@ -22,15 +31,25 @@ function createMenuCard(menuOption) {
 
 export function createMenu() {
   const menuContainer = document.createElement("div");
+  menuContainer.classList.add("menu-container");
+
+  const menuGridContainer = document.createElement("div");
+  menuGridContainer.classList.add("menu-grid-container");
+
+  const menuBanner = document.createElement("div");
+  menuBanner.classList.add("menu-banner", "page-banner");
 
   const menuTitle = document.createElement("h1");
   menuTitle.textContent = "Menu";
-  menuContainer.appendChild(menuTitle);
+  menuBanner.appendChild(menuTitle);
 
   items.forEach(function (itemOption) {
     const menuCard = createMenuCard(itemOption);
-    menuContainer.appendChild(menuCard);
+    menuGridContainer.appendChild(menuCard);
   });
+
+  menuContainer.appendChild(menuBanner);
+  menuContainer.appendChild(menuGridContainer);
 
   const menuContent = document.querySelector("#content");
   menuContent.appendChild(menuContainer);

@@ -1,0 +1,261 @@
+/* reset and variables */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background-color: #14213d;
+  --surface-color: #1f3054;
+  --text-color: #f5efe0;
+  --accent-color: #d4b26a;
+  --headings-font: "Cinzel", serif;
+  --body-font: "Karla", sans-serif;
+}
+
+/* base elements */
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent-color);
+  text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--text-color);
+  text-decoration-color: var(--accent-color);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--headings-font);
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+address {
+  font-style: normal;
+}
+
+address p {
+  margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* layout */
+
+.logo {
+  height: 5rem;
+  color: var(--accent-color);
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-bottom: 3px solid var(--accent-color);
+  padding: 0.5rem 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+nav button {
+  background: none;
+  border: none;
+  font: inherit;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+nav button:hover,
+nav button:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color);
+  text-underline-offset: 5px;
+  outline: none;
+}
+
+nav button[aria-current="page"] {
+  color: var(--accent-color);
+}
+
+#content {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2rem;
+  flex-grow: 1;
+  width: 100%;
+}
+
+footer {
+  border-top: 3px solid var(--accent-color);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+/* shared */
+
+.page-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-banner h1 {
+  margin-bottom: 0;
+}
+
+/* home */
+
+body:has(.home-hero) {
+  background-image:
+    linear-gradient(rgb(20 33 61 / 0.85), rgb(20 33 61 / 0.6)),
+    url("./images/hero.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.home-hero {
+  text-align: center;
+  padding: 4rem 0;
+  min-height: calc(100vh - 14rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-hero h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+}
+
+.home-hero h1::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 2px;
+  background-color: var(--text-color);
+  margin: 0 auto;
+}
+
+.home-tagline {
+  font-style: italic;
+  font-size: 1.75rem;
+  color: var(--accent-color);
+}
+
+/* menu */
+
+.menu-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.menu-card {
+  background-color: var(--surface-color);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 12px rgb(212 178 106 / 0.4);
+}
+
+.menu-option-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-option-name,
+.menu-option-price {
+  margin: 0;
+  padding-inline: 0.75rem;
+}
+
+.menu-option-name {
+  padding-top: 0.75rem;
+}
+
+.menu-option-price {
+  padding-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.menu-banner {
+  background-image:
+    linear-gradient(rgb(20 33 61 / 0.7), rgb(20 33 61 / 0.4)),
+    url("./images/menu.jpg");
+  background-position: center 30%;
+}
+
+/* contact */
+
+.contact-banner {
+  background-position: center 60%;
+  background-image:
+    linear-gradient(rgb(20 33 61 / 0.7), rgb(20 33 61 / 0.4)),
+    url("./images/contact.jpg");
+}
+
+.contact-map {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 1rem;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.address-wrapper {
+  margin-bottom: 2rem;
+}
+
+.phone-info {
+  margin-top: 1.5rem;
+}
+
+.opening-times {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+}
+
+.opening-times dt {
+  color: var(--accent-color);
+  font-weight: 600;
+}
