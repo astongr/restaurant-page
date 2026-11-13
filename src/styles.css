@@ -1,3 +1,5 @@
+/* reset and variables */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,6 +15,8 @@
   --body-font: "Karla", sans-serif;
 }
 
+/* base elements */
+
 body {
   display: flex;
   flex-direction: column;
@@ -22,15 +26,6 @@ body {
   font-size: 1.125rem;
   line-height: 1.6;
   min-height: 100vh;
-}
-
-body:has(.home-hero) {
-  background-image:
-    linear-gradient(rgb(20 33 61 / 0.85), rgb(20 33 61 / 0.6)),
-    url("./images/hero.jpg");
-  background-size: cover;
-  background-position: center bottom;
-  background-repeat: no-repeat;
 }
 
 a {
@@ -59,6 +54,17 @@ address {
 
 address p {
   margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* layout */
+
+.logo {
+  height: 5rem;
+  color: var(--accent-color);
 }
 
 header {
@@ -104,13 +110,38 @@ nav button[aria-current="page"] {
   width: 100%;
 }
 
-p {
-  margin-bottom: 1.5rem;
+footer {
+  border-top: 3px solid var(--accent-color);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.875rem;
 }
 
-.logo {
-  height: 5rem;
-  color: var(--accent-color);
+/* shared */
+
+.page-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-banner h1 {
+  margin-bottom: 0;
+}
+
+/* home */
+
+body:has(.home-hero) {
+  background-image:
+    linear-gradient(rgb(20 33 61 / 0.85), rgb(20 33 61 / 0.6)),
+    url("./images/hero.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
 }
 
 .home-hero {
@@ -141,14 +172,7 @@ p {
   color: var(--accent-color);
 }
 
-footer {
-  border-top: 3px solid var(--accent-color);
-  padding: 1rem 0;
-  text-align: center;
-  font-size: 0.875rem;
-}
-
-/* menu styling */
+/* menu */
 
 .menu-grid-container {
   display: grid;
@@ -192,20 +216,6 @@ footer {
   font-weight: 600;
 }
 
-.page-banner {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 3rem 1.5rem;
-  border-radius: 1rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.page-banner h1 {
-  margin-bottom: 0;
-}
-
 .menu-banner {
   background-image:
     linear-gradient(rgb(20 33 61 / 0.7), rgb(20 33 61 / 0.4)),
@@ -213,7 +223,7 @@ footer {
   background-position: center 30%;
 }
 
-/* contact css */
+/* contact */
 
 .contact-banner {
   background-position: center 60%;
