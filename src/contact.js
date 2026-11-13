@@ -1,3 +1,9 @@
+function createAddressLine(line) {
+  const addressLine = document.createElement("p");
+  addressLine.textContent = line;
+  return addressLine;
+}
+
 export function createContact() {
   const contactContainer = document.createElement("div");
 
@@ -23,20 +29,16 @@ export function createContact() {
   const addressWrapper = document.createElement("address");
   addressWrapper.classList.add("address-wrapper");
 
-  const addressStreet = document.createElement("p");
-  addressStreet.textContent = "105 Heol Llanishen Fach";
+  const addressStreet = createAddressLine("105 Heol Llanishen Fach");
   addressWrapper.appendChild(addressStreet);
 
-  const addressArea = document.createElement("p");
-  addressArea.textContent = "Rhiwbina";
+  const addressArea = createAddressLine("Rhiwbina");
   addressWrapper.appendChild(addressArea);
 
-  const addressCity = document.createElement("p");
-  addressCity.textContent = "Cardiff";
+  const addressCity = createAddressLine("Cardiff");
   addressWrapper.appendChild(addressCity);
 
-  const addressPostcode = document.createElement("p");
-  addressPostcode.textContent = "CF14 6RE";
+  const addressPostcode = createAddressLine("CF14 6RE");
   addressWrapper.appendChild(addressPostcode);
 
   const telephoneWrapper = document.createElement("p");
