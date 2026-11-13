@@ -1,9 +1,17 @@
 import latteImage from "./images/latte.jpg";
-import placeholderImage from "./images/menu.jpg";
+import hotChocolateImage from "./images/hot-chocolate.jpg";
+import americanoImage from "./images/americano.jpg";
+import toastieImage from "./images/toastie.jpg";
+import poachedEggsImage from "./images/poached-eggs.jpg";
+import shakshukaImage from "./images/shakshuka.jpg";
 
 const items = [
   { name: "Latte", price: "£3.50", image: latteImage },
-  { name: "Hot Chocolate", price: "£4.50", image: placeholderImage },
+  { name: "Hot Chocolate", price: "£4.50", image: hotChocolateImage },
+  { name: "Americano", price: "£3.00", image: americanoImage },
+  { name: "Ham and Cheese Toastie", price: "£5.00", image: toastieImage },
+  { name: "Poached Eggs on Toast", price: "£6.00", image: poachedEggsImage },
+  { name: "Shakshuka", price: "£7.50", image: shakshukaImage },
 ];
 
 function createMenuCard(menuOption) {

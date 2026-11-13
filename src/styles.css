@@ -176,11 +176,13 @@ body:has(.home-hero) {
 
 .menu-grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 2rem;
 }
 
 .menu-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--surface-color);
   border-radius: 1rem;
   overflow: hidden;
@@ -212,6 +214,7 @@ body:has(.home-hero) {
 }
 
 .menu-option-price {
+  margin-top: auto;
   padding-bottom: 0.75rem;
   font-weight: 600;
 }
