@@ -21,6 +21,7 @@ export function createContact() {
   contactContainer.appendChild(contactMap);
 
   const addressWrapper = document.createElement("address");
+  addressWrapper.classList.add("address-wrapper");
 
   const addressStreet = document.createElement("p");
   addressStreet.textContent = "105 Heol Llanishen Fach";
@@ -39,6 +40,7 @@ export function createContact() {
   addressWrapper.appendChild(addressPostcode);
 
   const telephoneWrapper = document.createElement("p");
+  telephoneWrapper.classList.add("phone-info");
 
   const telephoneNumber = document.createElement("a");
   telephoneNumber.href = "tel:02920180074";
@@ -63,6 +65,7 @@ export function createContact() {
   contactContainer.appendChild(openingTimesHeading);
 
   const openingTimesList = document.createElement("dl");
+  openingTimesList.classList.add("opening-times");
 
   const weekday = document.createElement("dt");
   weekday.textContent = "Monday - Friday";

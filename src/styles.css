@@ -31,6 +31,17 @@ body:has(.home-hero) {
   background-repeat: no-repeat;
 }
 
+a {
+  color: var(--accent-color);
+  text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--text-color);
+  text-decoration-color: var(--accent-color);
+}
+
 h1,
 h2,
 h3 {
@@ -38,6 +49,14 @@ h3 {
   color: var(--accent-color);
   margin-bottom: 0.5rem;
   line-height: 1.2;
+}
+
+address {
+  font-style: normal;
+}
+
+address p {
+  margin-bottom: 0;
 }
 
 header {
@@ -206,4 +225,23 @@ footer {
   border-radius: 1rem;
   display: block;
   margin-bottom: 2rem;
+}
+
+.address-wrapper {
+  margin-bottom: 2rem;
+}
+
+.phone-info {
+  margin-top: 1.5rem;
+}
+
+.opening-times {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+}
+
+.opening-times dt {
+  color: var(--accent-color);
+  font-weight: 600;
 }
