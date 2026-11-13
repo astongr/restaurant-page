@@ -1,9 +1,14 @@
 export function createContact() {
   const contactContainer = document.createElement("div");
 
+  const contactBanner = document.createElement("div");
+  contactBanner.classList.add("contact-banner", "page-banner");
+
   const contactTitle = document.createElement("h1");
   contactTitle.textContent = "Contact";
-  contactContainer.appendChild(contactTitle);
+  contactBanner.appendChild(contactTitle);
+
+  contactContainer.appendChild(contactBanner);
 
   const addressWrapper = document.createElement("address");
 
