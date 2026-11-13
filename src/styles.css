@@ -198,3 +198,12 @@ footer {
     linear-gradient(rgb(20 33 61 / 0.7), rgb(20 33 61 / 0.4)),
     url("./images/contact.jpg");
 }
+
+.contact-map {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 1rem;
+  display: block;
+  margin-bottom: 2rem;
+}
